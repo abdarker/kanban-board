@@ -1,0 +1,36 @@
+.kanban {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  &__section {
+    width: 200px;
+    background-color: white;
+    color: white;
+    border-radius: 0px;
+
+    border: 0.5px solid #ccc;
+    & ~ & {
+      margin-left: 20px;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: tomato;
+      height: 45px;
+      width: 200px;
+      font-weight: bold;
+      color: black;
+    }
+
+    &__content {
+      & > * ~ * {
+      }
+    }
+  }
+}
