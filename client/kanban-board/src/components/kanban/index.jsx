@@ -61,7 +61,7 @@ const Kanban = () => {
                 <div className="kanban__section__title">{section.title}</div>
 
                 <div className="kanban__section__content">
-                  {taskList.map((task, index) => (
+                  {section.tasks.map((task, index) => (
                     <Draggable
                       key={task.id}
                       draggableId={task.id}
@@ -77,7 +77,7 @@ const Kanban = () => {
                             opacity: snapshot.isDragging ? "0.5" : "1",
                           }}
                         >
-                          <Card>{task.task}</Card>
+                          <Card>{task.title}</Card>
                         </div>
                       )}
                     </Draggable>
